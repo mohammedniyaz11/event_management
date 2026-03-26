@@ -4,7 +4,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 // Routes
 const authRoutes = require("./route/auth.route");
-// const eventRoutes = require("./routes/event.routes");
+const eventRoutes = require("./routes/event.routes");
 
 const app = express();
 
@@ -52,7 +52,7 @@ app.get("/", (req, res) => {
  * ========================
  */
 app.use("/api/auth", authRoutes);
-// app.use("/api/events", eventRoutes);
+app.use("/api/events", eventRoutes);
 
 /**
  * ========================
